@@ -1,0 +1,5 @@
+INC=/user/ub2037/Col7.0.1_2021-01-14_for-NX_bin/Columbus/CPAN /user/ub2037/Col7.0.1_2021-01-14_for-NX_bin/Columbus/perlscripts CODE(0x2125380)
+Perlversion:5.012004
+choice=geom
+intprogram=hermit
+

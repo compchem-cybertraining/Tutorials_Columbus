@@ -1,0 +1,11 @@
+ [GEOCONV]
+ energy
+-94.6661949589
+ max-step
+0.0001124
+ rms-step
+0.0000396
+ max-force
+0.0002272
+ rms-force
+0.0001041

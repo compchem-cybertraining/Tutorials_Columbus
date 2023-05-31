@@ -1,0 +1,202 @@
+===========================================================
+===                   runc                              ===
+===           version 7.0.1 , October 2020              ===
+===          requires COLUMBUS version Col_7.0.1        ===
+===                                                     ===
+===   written by: Thomas Mueller                        ===
+===   gradient ext. by: Michal Dallos                   ===
+===               University of Vienna                  ===
+===   maintained by: Felix Plasser                      ===
+===               Loughborough University               ===
+===========================================================
+
+
+coremem. (seq.): 1700 MB,  coremem. (par.): 1700 MB
+Vdisk size: 0 DP
+Reading job control file control.run ...   done 
+Creating various directories ... 
+ done 
+Checking for illegal keywords and keyword combinations ... done 
+Checking for complete set of input files ... 
+mcscf calculation without preceeding scf calculation 
+will use 
+ /projects/academic/cyberwksp21/Students/Columbus_tutorial/TUTORIAL/CNH4_MRCI43_C1_OPTS1/mocoef as starting MOs 
+done
+setting /projects/academic/cyberwksp21/Students/Columbus_tutorial/TUTORIAL/CNH4_MRCI43_C1_OPTS1/curr_iter to 1
+
+ ============== Iteration No 1 ===================
+
+
+ ++++++++++++++++++ input file generation +++++++++++++ 
+ runc start: Tue Jun 22 16:52:14 EDT 2021
+ 
+  runc start: Tue Jun 22 16:52:14 EDT 2021
+ 
+ starting unik.gets.x > unikls at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- unik.gets.x ------------------------
+ --------------------------------------------------- 
+ starting hernew.x at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- hernew.x ------------------------
+ --------------------------------------------------- 
+ ++++++++++++++++++++ ao integral calculation ++++++++++++++++
+starting dalton.x -m 1700 > hermitls at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- dalton.x ------------------------
+  Nuclear repulsion energy:       38.5887042482
+
+ Irred. repr. : A       
+ # orbitals  :  36 
+ --------------------------------------------------- 
+  >>>>>>>>>>>>> info: preparing drt no 1 out of 1 <<<<<<
+starting mcdrt.x -m 1700 < mcdrtin > mcdrtls at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- mcdrt.x ------------------------
+  Spin multiplicity: singlet 
+  Spatial symmetry (#): 1
+  Number of Configurations:          6 
+  --------------------------------------------------- 
+ starting mcuft.x at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- mcuft.x ------------------------
+ --------------------------------------------------- 
+ ++++++++++++++++++++ MCSCF calculation +++++++++++++++
+info: taking mocoef file from /projects/academic/cyberwksp21/Students/Columbus_tutorial/TUTORIAL/CNH4_MRCI43_C1_OPTS1/mocoef
+starting mcscf.x -m 1700 at Tue Jun 22 16:52:14 EDT 2021
+
+ -------------------- mcscf.x ------------------------
+ Individual total energies for all states: 
+    DRT #1 state # 1 wt 0.333 total energy=      -94.398532384, rel. (eV)=   0.000000
+    DRT #1 state # 2 wt 0.333 total energy=      -94.053559786, rel. (eV)=   9.387186
+    DRT #1 state # 3 wt 0.333 total energy=      -94.013893351, rel. (eV)=  10.466565
+  --------------------------------------------------- 
+ starting mcpc.x -m 1700 < mcpcin > mcpcls at Tue Jun 22 16:52:15 EDT 2021
+
+ -------------------- mcpc.x ------------------------
+ --------------------------------------------------- 
+ starting mcpc.x -m 1700 < mcpcin > mcpcls at Tue Jun 22 16:52:15 EDT 2021
+
+ -------------------- mcpc.x ------------------------
+ --------------------------------------------------- 
+ starting mcpc.x -m 1700 < mcpcin > mcpcls at Tue Jun 22 16:52:15 EDT 2021
+
+ -------------------- mcpc.x ------------------------
+ --------------------------------------------------- 
+  using the MCSCF MOs ... 
+starting cidrt.x   -m 1700 < cidrtin > cidrtls  at Tue Jun 22 16:52:15 EDT 2021
+
+ -------------------- cidrt.x ------------------------
+ total number of orbitals            :    36
+ number of frozen core orbitals      :     2
+ number of frozen virtual orbitals   :     0
+ number of internal orbitals         :     7
+ number of external orbitals         :    27
+ spatial symmetry:   a  
+ 
+ total number of configurations      64477
+ number of reference configurations     6
+ --------------------------------------------------- 
+ starting tran.x -m 1700  at Tue Jun 22 16:52:15 EDT 2021
+
+ -------------------- tran.x ------------------------
+ --------------------------------------------------- 
+ skipping cisrt.x call .... 
+Gradient specification taken from transmomin: 1
+starting ciudg.x -m 1700 at Tue Jun 22 16:52:15 EDT 2021
+
+  waiting after driverwrap ....                     0
+ -------------------- ciudg.x ------------------------
+ type of calculation:          mr-sdci
+ number of configurations:     64477
+ total mr-sdci energy              -94.6661949589 
+ last mr-sdci energy change           0.0000000000 
+ residual                             0.0000339600 
+  type of calculation:          mr-sdci
+ number of configurations:     64477
+ total mr-sdci energy              -94.3093370833 
+ last mr-sdci energy change           0.0000000100 
+ residual                             0.0000846470 
+  c0**2 =   0.91959500  c**2 (all zwalks) =   0.92070428
+ mr-sdci+(1-c0**2)*(eci-eref)             =     -94.687746188612 
+ mr-sdci+(1-c0**2)/(c0**2)*(eci-eref)     =     -94.689630525374 
+ mr-sdci+(1-c0**2)/(2*c0**2-1)*(eci-eref) =     -94.691875948661 
+ c0**2 =   0.89900212  c**2 (all zwalks) =   0.90132416
+ mr-sdci+(1-c0**2)*(eci-eref)             =     -94.339424071694 
+ mr-sdci+(1-c0**2)/(c0**2)*(eci-eref)     =     -94.342804177235 
+ mr-sdci+(1-c0**2)/(2*c0**2-1)*(eci-eref) =     -94.347039875961 
+ --------------------------------------------------- 
+ starting cipc.x -m 1700 < cipcin > cipcls at Tue Jun 22 16:52:18 EDT 2021
+
+ -------------------- cipc.x ------------------------
+ --------------------------------------------------- 
+ after delete scf route=prep_inputs aointegrals mcdrtpart mcscfpart drtpart preci cipart
+Gradient specification taken from transmomin: 1
+Computing CI gradient for state #1
+linking cid1fl.drt1.state1 to cid1fl
+linking cid2fl.drt1.state1 to cid2fl
+INFO: this is a frozen core gradient calculation
+starting cidrt.x   -m 1700 < cidrtin.cigrd > cidrtls.cigrd at Tue Jun 22 16:52:18 EDT 2021
+
+ -------------------- cidrt.x ------------------------
+ total number of orbitals            :    36
+ number of frozen core orbitals      :     2
+ number of frozen virtual orbitals   :     0
+ number of internal orbitals         :     7
+ number of external orbitals         :    27
+ spatial symmetry:   a  
+ 
+ total number of configurations      64477
+ number of reference configurations     6
+ --------------------------------------------------- 
+ starting tran.x -m 1700  at Tue Jun 22 16:52:18 EDT 2021
+
+ -------------------- tran.x ------------------------
+ --------------------------------------------------- 
+ starting cigrd.x -m 1700 at Tue Jun 22 16:52:18 EDT 2021
+
+ -------------------- cigrd.x ------------------------
+ Total energy (ciudg) :   -94.666194958866 
+  Effective energy     :   -94.666194958842 
+  Delta E              :    -0.000000000024 
+  --------------------------------------------------- 
+ starting tran.x -m 1700  at Tue Jun 22 16:52:19 EDT 2021
+
+ -------------------- tran.x ------------------------
+ --------------------------------------------------- 
+ starting dalton.x -m 1700   > abacusls at Tue Jun 22 16:52:19 EDT 2021
+
+ -------------------- dalton.x ------------------------
+  Nuclear repulsion energy:       38.5887042482
+
+ Irred. repr. : A       
+ # orbitals  :  36 
+ --------------------------------------------------- 
+ 
+ === Final cartesian gradient === 
+  -0.822137D-05   0.192528D-05  -0.108599D-04
+   0.315486D-05  -0.504162D-05   0.724444D-04
+   0.210034D-05  -0.285915D-05  -0.760350D-05
+   0.362169D-05   0.344294D-05  -0.903509D-05
+   0.189127D-06   0.974101D-05  -0.223797D-04
+  -0.844650D-06  -0.720846D-05  -0.225663D-04
+===================================
+ Found intcfl file, performing internal coordinate analysis.
+starting cart2int.x at Tue Jun 22 16:52:19 EDT 2021
+
+ -------------------- cart2int.x ------------------------
+ --------------------------------------------------- 
+ starting gdiis.x at Tue Jun 22 16:52:19 EDT 2021
+
+ -------------------- gdiis.x ------------------------
+
+          value                converged
+        -----------------------------------
+         max-step=   0.0001124  yes 
+         rms-step=   0.0000396  yes 
+         max-force=  0.0002272  yes 
+         rms-force=  0.0001041  yes 
+
+ --------------------------------------------------- 
+ gradient calculation converged.
+runc.perl finished
